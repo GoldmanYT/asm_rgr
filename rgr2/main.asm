@@ -96,7 +96,7 @@ set_1:		mov	dl, 1		; Иначе поставить 1
 set_0:		xor	rdx, rdx
 end_set:
 		xor	r8, r8		; pvParam = NULL
-		mov	r9, 2		; fWinIni = 1 - Сохранить в реестр
+		xor	r9, r9		; fWinIni = NULL
 		call	SystemParametersInfoA
 
 		test	rax, rax

@@ -22,3 +22,4 @@ move /Y %exe_path% %output_path%
 cd %folder%
 
 %exe_path%
+pause
