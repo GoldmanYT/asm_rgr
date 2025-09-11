@@ -1,4 +1,4 @@
-set folder=rgr1
+set folder=rgr2
 set name=main
 set asm_path=%folder%\%name%.asm
 set obj_path=%name%.obj
@@ -22,3 +22,4 @@ move /Y %exe_path% %output_path%
 cd %folder%
 
 %exe_path%
+pause
