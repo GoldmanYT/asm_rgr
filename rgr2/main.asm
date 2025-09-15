@@ -1,5 +1,5 @@
-		includelib	kernel32.lib
-		includelib	user32.lib
+		includelib	../kernel32.lib
+		includelib	../user32.lib
 		extern	ExitProcess: proc
 		extern	SystemParametersInfoA: proc
 		extern	ReadConsoleA: proc
@@ -37,7 +37,7 @@ menuAlignment	db	0
 WaitEnter	macro
 		mov	rcx, hin
 		mov	rdx, offset tmp1
-		mov	r8, 1
+		mov	r8, 2
 		mov	r9, offset tmp2
 		mov	qword ptr [rsp + 32], 0
 		call	ReadConsoleA

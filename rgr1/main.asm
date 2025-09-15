@@ -1,5 +1,5 @@
-		includelib	kernel32.lib
-		includelib	user32.lib
+		includelib	../kernel32.lib
+		includelib	../user32.lib
 		extern	ExitProcess: proc
 		extern  MessageBoxA: proc
 		extern  wsprintfA: proc

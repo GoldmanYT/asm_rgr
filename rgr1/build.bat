@@ -1,20 +1,15 @@
-set folder=rgr2
 set name=main
-set asm_path=%folder%\%name%.asm
-set obj_path=%name%.obj
-set exe_path=%name%.exe
-set output_path=%folder%
 
 :: Создание объектного файла
-..\ml64 /Cp /c %asm_path%
+..\ml64 /Cp /c %name%.asm
 pause
 
 :: Создание исполняемого файла
-..\link /SUBSYSTEM:CONSOLE /ENTRY:WinMain %obj_path%
+..\link /SUBSYSTEM:CONSOLE /ENTRY:WinMain %name%.obj
 pause
 
 :: Удаление объектного файла
-del /q %obj_path%
+del /q %name%.obj
 
-%exe_path%
+%name%.exe
 pause
