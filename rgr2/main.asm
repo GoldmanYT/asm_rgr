@@ -86,15 +86,8 @@ WinMain		proc
 		WaitEnter
 
 		mov	rcx, 28		; SPI_SETMENUGROPALIGNMENT = 28
-
-		xor	rdx, rdx
-		mov	dl, menuAlignment
-		test	rdx, rdx	
-		jnz	set_0		; Если menuAligntment != 0, то поставить 0
-set_1:		mov	dl, 1		; Иначе поставить 1
-		jmp	end_set
-set_0:		xor	rdx, rdx
-end_set:
+		movzx	rdx, menuAlignment
+		xor	rdx, 1		; инвертировать menuAlignment
 		xor	r8, r8		; pvParam = NULL
 		xor	r9, r9		; fWinIni = NULL
 		call	SystemParametersInfoA
